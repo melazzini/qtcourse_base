@@ -1,0 +1,20 @@
+#include <QtWidgets>
+
+int main(int argc, char *argv[])
+{
+	QApplication a{argc, argv};
+
+	QWidget w;
+
+	auto btn{new QPushButton("Ok")};
+	auto lbl{new QLabel("are you sure?")};
+
+	QFormLayout formLayout;
+
+	formLayout.addRow(lbl, btn);
+
+	w.setLayout(&formLayout);
+
+	w.show();
+	return a.exec();
+}
