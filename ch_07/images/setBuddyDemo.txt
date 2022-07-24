@@ -1,0 +1,29 @@
+#include <QtWidgets>
+#include <vector>
+#include <QObject>
+#include "CalculatorView.hpp"
+#include "Calculator.hpp"
+
+int main(int argc, char *argv[])
+{
+	QApplication a{argc, argv};
+
+	QWidget w;
+	QVBoxLayout layout;
+
+	QLabel lblName{"&Name"};
+	QLineEdit lineEdit;
+	lblName.setBuddy(&lineEdit);
+	layout.addWidget(&lblName);
+	layout.addWidget(&lineEdit);
+
+	QLabel lblAge{"&Age"};
+	QSpinBox spinBox;
+	lblAge.setBuddy(&spinBox);
+	layout.addWidget(&lblAge);
+	layout.addWidget(&spinBox);
+
+	w.setLayout(&layout);
+	w.show();
+	return a.exec();
+}
