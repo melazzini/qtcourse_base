@@ -8,12 +8,16 @@ int main(int argc, char *argv[])
 {
 	QApplication a{argc, argv};
 
-	CalculatorView calView;
+	QPixmap pxmap;
+	pxmap.load("../ch_07/images/gibsonsg.jpg");
 
-	Calculator calculator;
+	QLabel lbl;
 
-	QObject::connect(&calView, &CalculatorView::newDigit, &calculator, &Calculator::newDigit);
+	lbl.setPixmap(pxmap);
 
-	calView.show();
+	lbl.resize(pxmap.size());
+
+	lbl.show();
+
 	return a.exec();
 }
