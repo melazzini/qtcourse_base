@@ -18,6 +18,7 @@ set(PROJECT_SOURCES
         main.cpp
         CalculatorView.hpp
         Calculator.hpp
+        MyCustomDelegate.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -32,5 +32,11 @@ int main(int argc, char *argv[])
 
 	w.setLayout(&layout);
 	w.show();
+
+	auto pal{QPalette(Qt::green, Qt::gray)};
+
+	a.setPalette(pal);
+	a.setStyle("Windows");
+
 	return a.exec();
 }
